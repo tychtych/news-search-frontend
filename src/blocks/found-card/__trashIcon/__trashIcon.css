@@ -1,0 +1,21 @@
+.found-card__trashIcon {
+  background-image: url("../../../vendor/images/trash.svg");
+  border: none;
+  border-radius: 8px;
+  box-sizing: border-box;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  background-color: #fff;
+  padding: 13px;
+  outline: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  top: 24px;
+  right: 24px
+}
+
+.found-card__trashIcon:hover {
+  background-image: url("../../../vendor/images/trash-hover.svg");
+}

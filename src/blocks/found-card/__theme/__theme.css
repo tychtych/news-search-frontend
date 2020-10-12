@@ -1,0 +1,18 @@
+.found-card__theme {
+  font-family: 'Roboto', Arial, sans-serif;
+  border-radius: 10px;
+  text-align: center;
+  box-sizing: border-box;
+  width: 88px;
+  height: 40px;
+  background-color: #fff;
+  padding: 8px 12px;
+  font-size: 14px;
+  line-height: 24px;
+  outline: none;
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  margin: 0;
+  z-index: 2;
+}

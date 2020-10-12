@@ -1,0 +1,8 @@
+@import url('__subtitle/__subtitle.css');
+@import url('__title/__title.css');
+@import url('__keywords/__keywords.css');
+@import url('__keywords-bold/__keywords-bold.css');
+
+.articles-intro {
+  padding: 40px 104px 56px;
+}

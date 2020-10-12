@@ -1,0 +1,12 @@
+.found-card__source {
+  font-family: "Roboto Slab", Arial, sans-serif;
+  color: #B6BCBF;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+}

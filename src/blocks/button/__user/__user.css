@@ -1,0 +1,7 @@
+.button__user {
+  background: none;
+  border: 1px solid #1A1B22;
+  display: flex;
+  padding: 15px 12px;
+  align-items: center;
+}

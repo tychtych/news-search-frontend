@@ -1,0 +1,13 @@
+@import url('__content/__content.css');
+@import url('__title/__title.css');
+@import url('__subtitle/__subtitle.css');
+@import url('__search/__search.css');
+@import url('__search-input/__searchInput.css');
+@import url('../button/__search/__search.css');
+@import url('__form/__form.css');
+
+.intro {
+  max-width: 608px;
+  margin: 0 auto;
+  width: 100%;
+}

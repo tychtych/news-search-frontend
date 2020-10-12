@@ -1,0 +1,13 @@
+@import url('__title/__title.css');
+@import url('__subtitle/__subtitle.css');
+@import url('__image/__image.css');
+
+.no-results {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+  background: #F5F6F7;
+  align-items: center;
+  padding: 80px 0;
+}

@@ -1,0 +1,18 @@
+.found-card__delete {
+  font-family: 'Roboto', Arial, sans-serif;
+  border-radius: 10px;
+  text-align: center;
+  box-sizing: border-box;
+  width: 159px;
+  height: 40px;
+  background-color: #fff;
+  padding: 8px 12px;
+  font-size: 14px;
+  line-height: 24px;
+  outline: none;
+  position: absolute;
+  top: 24px;
+  right: 69px;
+  margin: 0;
+  z-index: 3;
+}

@@ -1,0 +1,7 @@
+.header__menu {
+  display: flex;
+  list-style: none;
+  text-decoration: none;
+  align-items: center;
+  margin: 0
+}

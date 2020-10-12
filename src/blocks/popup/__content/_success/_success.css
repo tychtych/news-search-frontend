@@ -1,0 +1,12 @@
+.popup__content_success {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 430px;
+  min-height: 182px;
+  padding: 43px 36px 51px 36px;
+  box-sizing: border-box;
+  margin: 0;
+
+}

@@ -1,0 +1,11 @@
+@import url('__avatar/__avatar.css');
+@import url('__title/__title.css');
+@import url('__content/__content.css');
+@import url('__paragraph/__paragraph.css');
+.about {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+  padding: 80px 0 80px 0;
+}

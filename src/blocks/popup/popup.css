@@ -1,0 +1,28 @@
+@import url('__content/__content.css');
+@import url('__content/_success/_success.css');
+@import url('__form/__form.css');
+@import url('../hidden/hidden.css');
+@import url('__close/__close.css');
+@import url('__title/__title.css');
+@import url('__label/__label.css');
+@import url('__input-container/__input-container.css');
+@import url('__input/__input.css');
+@import url('__error-message/__error-message.css');
+@import url('_button/_button.css');
+@import url('__alternative/__alternative.css');
+@import url('__link/__link.css');
+@import url('__link/_type_success/_type_success.css');
+
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}

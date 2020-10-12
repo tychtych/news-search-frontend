@@ -1,0 +1,13 @@
+@import url('../blocks/header/header.css');
+@import url('../blocks/header/_theme_dark/_theme_dark.css');
+@import url('../blocks/header/__item/_dark/_dark.css');
+@import url('../blocks/header/__item/_dark/_dark.css');
+@import url('../blocks/button/button.css');
+@import url('../blocks/button/__user/__user.css');
+@import url('../blocks/articles-intro/articles-intro.css');
+@import url('../blocks/found-card/found-card.css');
+@import url('../blocks/footer/footer.css');
+
+body {
+  margin: 0;
+}

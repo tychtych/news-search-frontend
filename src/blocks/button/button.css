@@ -1,0 +1,13 @@
+@import url('__search/__search.css');
+@import url('__more/__more.css');
+@import url('__signin/__signin.css');
+
+.button {
+  font-family: Roboto, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  border-radius: 100px;
+  box-sizing: border-box;
+  cursor: pointer;
+}

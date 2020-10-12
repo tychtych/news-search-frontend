@@ -1,0 +1,10 @@
+.header__item {
+  font-family: 'Roboto', Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 34px;
+  min-height: 80px;
+  font-size: 18px;
+  line-height: 24px;
+}

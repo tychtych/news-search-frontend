@@ -1,0 +1,24 @@
+@import url('__container/__container.css');
+@import url('__media/__media.css');
+@import url('__item/__item.css');
+@import url('__image/__image.css');
+@import url('__save-icon/__save-icon.css');
+@import url('__description/__description.css');
+@import url('__date/__date.css');
+@import url('__title/__title.css');
+@import url('__text/__text.css');
+@import url('__source/__source.css');
+@import url('../button/button.css');
+@import url('../button/__more/__more.css');
+@import url('__trashIcon/__trashIcon.css');
+@import url('__theme/__theme.css');
+@import url('__delete/__delete.css');
+
+.found-card {
+  background-color: #F5F6F7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 80px;
+  padding-top: 62px;
+}

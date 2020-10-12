@@ -1,0 +1,9 @@
+.found-card__container {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 16px;
+  justify-content: center;
+}
+
+
