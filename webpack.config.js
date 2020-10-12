@@ -30,19 +30,7 @@ module.exports = {
         //test: /\.css$/, // применять это правило только к CSS-файлам
         //use: [MiniCssExtractPlugin.loader, 'css-loader'] // к этим файлам нужно применить пакеты, которые мы уже установили
       //},
-      {
-        test: /\.css$/i,
-        use: [
-          {
-            loader: MiniCssExtractPlugin.loader,
-            options: {
-              publicPath: '../',
-            },
-          },
-          'css-loader',
-          'postcss-loader',
-        ],
-      },
+
       {
         test: /\.(png|jpg|gif|ico|svg)$/,
         use: [
@@ -64,7 +52,19 @@ module.exports = {
       },
       {
         test: /\.(eot|ttf|woff|woff2)$/,
-        loader: 'file-loader?name=./vendor/[name].[ext]&publicPath=../',
+        loader: 'file-loader?name=./vendor/[name].[ext]'
+      },
+      {
+        test: /\.css$/i,
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+            },
+          },
+          'css-loader',
+          'postcss-loader',
+        ],
       },
     ]
   },

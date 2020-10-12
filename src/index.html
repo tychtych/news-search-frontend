@@ -28,7 +28,6 @@
       <p class="intro__subtitle"> Find and keep up with news articles on any topic and save them!</p>
         <form method="post" class="intro__form" id="searchForm">
       <div class="intro__search">
-        <label for="search-input" class="sr-only"></label>
           <input type="text" id="search-input" class="intro__searchInput" placeholder="Find news on..."
                  minlength="2"
                  maxlength="20">
@@ -200,6 +199,6 @@
 
 </div>
 
-<script src="<%= htmlWebpackPlugin.files.js %>"></script>
+<script src="<%= htmlWebpackPlugin.files.js[0]%>"></script>
 </body>
 </html>
