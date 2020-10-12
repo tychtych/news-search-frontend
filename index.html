@@ -1,1 +1,158 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="News Search || Find all news you want"><meta name="author" content="Anastasiia"><title>News Explorer</title><link rel="stylesheet" href="style.d74316ea4a4971622d79.css"></head><body><div class="page"><div class="wrapper"><header class="header"><img src="images/NewsExplorer.svg" alt="" class="header__logo"><nav class="header__nav"><ul class="header__menu"><li class="header__item header__item_select"><a href="#" class="header__link">Home</a></li><li class="header__item"><a href="articles.html" class="header__link">Saved Articles</a></li><button class="button button__signin">Sign in</button></ul></nav></header><section class="intro"><div class="intro__content"><h1 class="intro__title">What's up in the world?</h1><p class="intro__subtitle">Find and keep up with news articles on any topic and save them!</p><form method="post" class="intro__form" id="searchForm"><div class="intro__search"><label for="search-input" class="sr-only"></label> <input id="search-input" class="intro__searchInput" placeholder="Find news on..." minlength="2" maxlength="20"> <button class="button button__search" type="submit">Search</button></div></form></div></section></div><section class="loader hidden"><i class="loader__circle"></i><p class="loader__title">Searching articles...</p></section><section class="no-results hidden"><img class="no-results__image" src="images/not-found.svg" alt="unexpected error"><h2 class="no-results__title">Oops...</h2><p class="no-results__subtitle">No articles were found.</p></section><section class="about"><img src="images/avatar.png" alt="picture with the project's author" class="about__avatar"><div class="about__content"><h2 class="about__title">About the Developer</h2><p class="about__paragraph">Front-end Developer with experience building responsive websites and specializing in HTML5, SCSS, Vanilla JavaScript and frameworks Vue.js and React. I have hands-on experience with AWS services as I was migrating recently the current project from Inmotion to AWS! Now I am preparing to pass the Cloud Practitioner exam (yes, I had a great practice first before the exam itself ha-ha!) I really enjoy working both independently and within a team to deliver a quality product.</p><p class="about__paragraph">Moreover, I keen on minimalistic and elegant design solutions for users - I study a lot of material on UI/UX and constantly work on my skills.</p></div></section><main class="main"><section class="search-results"><h2 class="search-results__title">Search Results</h2></section><section class="found-card"><div class="found-card__container"><a href="https://www.yosemite.com/safe-travel-to-yosemite-ca/" class="found-card__item" target="_blank"><div class="found-card__media"><img src="images/card1.png" alt="violet plants" class="found-card__image"> <svg alt="bookmark which helps to save the article" class="found-card__save-icon" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="40" height="40" rx="8" fill="white"/><path class="test" d="M19.3822 23.7137L14 27.9425V12L26 12V27.9425L20.6178 23.7137L20 23.2283L19.3822 23.7137Z" stroke="#B6BCBF" stroke-width="2"/></svg></div><blockquote class="found-card__description"><time datetime="August 2, 2019" class="found-card__date">August 2, 2019</time><h3 class="found-card__title">Safe Travel to Yosemite Mariposa County</h3><p class="found-card__text">Yes! Due to a number of factors, Yosemite Mariposa County is one of the safest places to visit in California. Our county is one of just a handful that has been allowed the privilege of operating under reduced restrictions that allow visitors for a safe, stress-free and enjoyable getaway.</p></blockquote><cite class="found-card__source">Yosemite.com</cite> </a><a href="https://www.mymotherlode.com/news/local/1307816/yosemites-blue-jay-fire-over-6300-acres.html" class="found-card__item" target="_blank"><div class="found-card__media"><img src="images/crard2.png" alt="violet plants" class="found-card__image"> <img src="images/saveicon.svg" alt="bookmark which helps to save the article" class="found-card__save-icon"></div><blockquote class="found-card__description"><time datetime="August 2, 2019" class="found-card__date">Oct 9, 2020</time><h3 class="found-card__title">Yosemite’s Blue Jay Fire Over 6,300 Acres</h3><p class="found-card__text">The Blue Jay Fire, near the Yosemite Creek drainage and south of 10 Lakes Trail, is 6,334 acres, and 50-percent contained. Yosemite officials report that it has been creeping and smoldering through pockets of debris and dead and dying trees.</p></blockquote><cite class="found-card__source">mymotherlode.com</cite> </a><a href="https://www.mercurynews.com/2020/09/29/yosemite-national-park-to-drop-day-use-reservations-nov-1/" class="found-card__item" target="_blank"><div class="found-card__media"><img src="images/card3.png" alt="violet plants" class="found-card__image"> <img src="images/saveicon.svg" alt="bookmark which helps to save the article" class="found-card__save-icon"></div><blockquote class="found-card__description"><time datetime="August 2, 2019" class="found-card__date">Oct 9, 2020</time><h3 class="found-card__title">Yosemite National Park to drop day-use reservations Nov. 1</h3><p class="found-card__text">Four months after Yosemite National Park limited the number of people who can visit due to concerns over the spread of coronavirus, park officials on Tuesday announced they are fully reopening the gates.</p></blockquote><cite class="found-card__source">Mercury News</cite></a></div><button class="button button__more">Load More</button></section></main><div class="popup hidden" id="popup-login"><div class="popup__content"><img src="images/back.svg" alt="close add" class="popup__close"><h3 class="popup__title">Sign in</h3><form class="popup__form" name="new"><div class="popup__input-container"><label for="add-email" class="popup__label"></label> <input id="add-email" name="email" class="popup__input popup__input_type_name" placeholder="Email" minlength="2" maxlength="30" required> <span id="error-add-name" class="popup__error-message popup__error-message_hidden"></span></div><div class="popup__input-container"><label for="add-password" class="popup__label"></label> <input id="add-password" type="email" name="password" class="popup__input popup__input_type_link-url" placeholder="Password" required> <span id="error-add-image" class="error-message error-message__hidden"></span></div><button class="popup_button">Sign in</button><p class="popup__alternative">or <a href="" class="popup__link">Sign Up</a></p></form></div></div><div class="popup hidden" id="popup-signup"><div class="popup__content"><img src="images/back.svg" alt="close add" class="popup__close"><h3 class="popup__title">Sign up</h3><form class="popup__form popup__form_signup" name="signup"><div class="popup__input-container"><label for="register-email" class="popup__label"></label> <input id="register-email" name="email" class="popup__input popup__input_type_name" placeholder="Email" minlength="2" maxlength="30" required> <span id="error-register-email" class="popup__error-message popup__error-message_hidden"></span></div><div class="popup__input-container"><label for="register-password" class="popup__label"></label> <input id="register-password" type="email" name="password" class="popup__input popup__input_type_link-url" placeholder="Password" required> <span id="error-register-password" class="error-message error-message__hidden"></span></div><div class="popup__input-container"><label for="register-name" class="popup__label"></label> <input id="register-name" type="email" name="password" class="popup__input popup__input_type_link-url" placeholder="Name" required> <span id="error-register-name" class="error-message error-message__hidden"></span></div><button class="popup_button">Sign in</button><p class="popup__alternative">or <a href="" class="popup__link">Sign In</a></p></form></div></div><div class="popup hidden" id="popup-success"><div class="popup__content popup__content_success"><img src="images/back.svg" alt="close add" class="popup__close"><h3 class="popup__title">The user is registered!</h3><button class="popup__link popup__link_type_success" type="button">Continue to sign in</button></div></div><footer class="footer"><p class="footer__copyright">&#169; News Search, Powered by News API</p><ul class="footer__links"><li class="footer__item"><a href="" class="footer__link">About</a></li><li class="footer__item"><a href="https://practicum.yandex.com/" class="footer__link">Practicum</a></li><a href="https://github.com/tychtych" class="footer__icon-link"><img src="images/github.svg" alt="github icon" class="footer__icon"></a><a href="https://github.com/tychtych" class="footer__icon-link"><img src="images/fb.svg" alt="facebook icon" class="footer__icon"></a></ul></footer></div><script src="index.77014994a60d91f63aac.js,articles.8dd77a4536502a25effe.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="News Search || Find all news you want">
+  <meta name="author" content="Anastasiia">
+  <title>News Explorer</title>
+  <link rel="stylesheet" href="style.d74316ea4a4971622d79.css">
+</head>
+<body>
+<div class="page">
+  <div class="wrapper">
+    <header class="header"><img src="images/NewsExplorer.svg" alt="" class="header__logo">
+      <nav class="header__nav">
+        <ul class="header__menu">
+          <li class="header__item header__item_select"><a href="#" class="header__link">Home</a></li>
+          <li class="header__item"><a href="articles.html" class="header__link">Saved Articles</a></li>
+          <button class="button button__signin">Sign in</button>
+        </ul>
+      </nav>
+    </header>
+    <section class="intro">
+      <div class="intro__content"><h1 class="intro__title">What's up in the world?</h1>
+        <p class="intro__subtitle">Find and keep up with news articles on any topic and save them!</p>
+        <form method="post" class="intro__form" id="searchForm">
+          <div class="intro__search"><label for="search-input" class="sr-only"></label> <input id="search-input"
+                                                                                               class="intro__searchInput"
+                                                                                               placeholder="Find news on..."
+                                                                                               minlength="2"
+                                                                                               maxlength="20">
+            <button class="button button__search" type="submit">Search</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </div>
+  <section class="loader hidden"><i class="loader__circle"></i>
+    <p class="loader__title">Searching articles...</p></section>
+  <section class="no-results hidden"><img class="no-results__image" src="images/not-found.svg" alt="unexpected error">
+    <h2 class="no-results__title">Oops...</h2>
+    <p class="no-results__subtitle">No articles were found.</p></section>
+  <section class="about"><img src="images/avatar.png" alt="picture with the project's author" class="about__avatar">
+    <div class="about__content"><h2 class="about__title">About the Developer</h2>
+      <p class="about__paragraph">Front-end Developer with experience building responsive websites and specializing in
+        HTML5, SCSS, Vanilla JavaScript and frameworks Vue.js and React. I have hands-on experience with AWS services as
+        I was migrating recently the current project from Inmotion to AWS! Now I am preparing to pass the Cloud
+        Practitioner exam (yes, I had a great practice first before the exam itself ha-ha!) I really enjoy working both
+        independently and within a team to deliver a quality product.</p>
+      <p class="about__paragraph">Moreover, I keen on minimalistic and elegant design solutions for users - I study a
+        lot of material on UI/UX and constantly work on my skills.</p></div>
+  </section>
+  <main class="main">
+    <section class="search-results"><h2 class="search-results__title">Search Results</h2></section>
+    <section class="found-card">
+      <div class="found-card__container"><a href="https://www.yosemite.com/safe-travel-to-yosemite-ca/"
+                                            class="found-card__item" target="_blank">
+        <div class="found-card__media"><img src="images/card1.png" alt="violet plants" class="found-card__image">
+          <svg alt="bookmark which helps to save the article" class="found-card__save-icon" width="40" height="40"
+               viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="40" height="40" rx="8" fill="white"/>
+            <path class="test"
+                  d="M19.3822 23.7137L14 27.9425V12L26 12V27.9425L20.6178 23.7137L20 23.2283L19.3822 23.7137Z"
+                  stroke="#B6BCBF" stroke-width="2"/>
+          </svg>
+        </div>
+        <blockquote class="found-card__description">
+          <time datetime="August 2, 2019" class="found-card__date">August 2, 2019</time>
+          <h3 class="found-card__title">Safe Travel to Yosemite Mariposa County</h3>
+          <p class="found-card__text">Yes! Due to a number of factors, Yosemite Mariposa County is one of the safest
+            places to visit in California. Our county is one of just a handful that has been allowed the privilege of
+            operating under reduced restrictions that allow visitors for a safe, stress-free and enjoyable getaway.</p>
+        </blockquote>
+        <cite class="found-card__source">Yosemite.com</cite> </a><a
+        href="https://www.mymotherlode.com/news/local/1307816/yosemites-blue-jay-fire-over-6300-acres.html"
+        class="found-card__item" target="_blank">
+        <div class="found-card__media"><img src="images/crard2.png" alt="violet plants" class="found-card__image"> <img
+          src="images/saveicon.svg" alt="bookmark which helps to save the article" class="found-card__save-icon"></div>
+        <blockquote class="found-card__description">
+          <time datetime="August 2, 2019" class="found-card__date">Oct 9, 2020</time>
+          <h3 class="found-card__title">Yosemite’s Blue Jay Fire Over 6,300 Acres</h3>
+          <p class="found-card__text">The Blue Jay Fire, near the Yosemite Creek drainage and south of 10 Lakes Trail,
+            is 6,334 acres, and 50-percent contained. Yosemite officials report that it has been creeping and smoldering
+            through pockets of debris and dead and dying trees.</p></blockquote>
+        <cite class="found-card__source">mymotherlode.com</cite> </a><a
+        href="https://www.mercurynews.com/2020/09/29/yosemite-national-park-to-drop-day-use-reservations-nov-1/"
+        class="found-card__item" target="_blank">
+        <div class="found-card__media"><img src="images/card3.png" alt="violet plants" class="found-card__image"> <img
+          src="images/saveicon.svg" alt="bookmark which helps to save the article" class="found-card__save-icon"></div>
+        <blockquote class="found-card__description">
+          <time datetime="August 2, 2019" class="found-card__date">Oct 9, 2020</time>
+          <h3 class="found-card__title">Yosemite National Park to drop day-use reservations Nov. 1</h3>
+          <p class="found-card__text">Four months after Yosemite National Park limited the number of people who can
+            visit due to concerns over the spread of coronavirus, park officials on Tuesday announced they are fully
+            reopening the gates.</p></blockquote>
+        <cite class="found-card__source">Mercury News</cite></a></div>
+      <button class="button button__more">Load More</button>
+    </section>
+  </main>
+  <div class="popup hidden" id="popup-login">
+    <div class="popup__content"><img src="images/back.svg" alt="close add" class="popup__close">
+      <h3 class="popup__title">Sign in</h3>
+      <form class="popup__form" name="new">
+        <div class="popup__input-container"><label for="add-email" class="popup__label"></label> <input id="add-email"
+                                                                                                        name="email"
+                                                                                                        class="popup__input popup__input_type_name"
+                                                                                                        placeholder="Email"
+                                                                                                        minlength="2"
+                                                                                                        maxlength="30"
+                                                                                                        required> <span
+          id="error-add-name" class="popup__error-message popup__error-message_hidden"></span></div>
+        <div class="popup__input-container"><label for="add-password" class="popup__label"></label> <input
+          id="add-password" type="email" name="password" class="popup__input popup__input_type_link-url"
+          placeholder="Password" required> <span id="error-add-image"
+                                                 class="error-message error-message__hidden"></span></div>
+        <button class="popup_button">Sign in</button>
+        <p class="popup__alternative">or <a href="" class="popup__link">Sign Up</a></p></form>
+    </div>
+  </div>
+  <div class="popup hidden" id="popup-signup">
+    <div class="popup__content"><img src="images/back.svg" alt="close add" class="popup__close">
+      <h3 class="popup__title">Sign up</h3>
+      <form class="popup__form popup__form_signup" name="signup">
+        <div class="popup__input-container"><label for="register-email" class="popup__label"></label> <input
+          id="register-email" name="email" class="popup__input popup__input_type_name" placeholder="Email" minlength="2"
+          maxlength="30" required> <span id="error-register-email"
+                                         class="popup__error-message popup__error-message_hidden"></span></div>
+        <div class="popup__input-container"><label for="register-password" class="popup__label"></label> <input
+          id="register-password" type="email" name="password" class="popup__input popup__input_type_link-url"
+          placeholder="Password" required> <span id="error-register-password"
+                                                 class="error-message error-message__hidden"></span></div>
+        <div class="popup__input-container"><label for="register-name" class="popup__label"></label> <input
+          id="register-name" type="email" name="password" class="popup__input popup__input_type_link-url"
+          placeholder="Name" required> <span id="error-register-name"
+                                             class="error-message error-message__hidden"></span></div>
+        <button class="popup_button">Sign in</button>
+        <p class="popup__alternative">or <a href="" class="popup__link">Sign In</a></p></form>
+    </div>
+  </div>
+  <div class="popup hidden" id="popup-success">
+    <div class="popup__content popup__content_success"><img src="images/back.svg" alt="close add" class="popup__close">
+      <h3 class="popup__title">The user is registered!</h3>
+      <button class="popup__link popup__link_type_success" type="button">Continue to sign in</button>
+    </div>
+  </div>
+  <footer class="footer"><p class="footer__copyright">&#169; News Search, Powered by News API</p>
+    <ul class="footer__links">
+      <li class="footer__item"><a href="" class="footer__link">About</a></li>
+      <li class="footer__item"><a href="https://practicum.yandex.com/" class="footer__link">Practicum</a></li>
+      <a href="https://github.com/tychtych" class="footer__icon-link"><img src="images/github.svg" alt="github icon"
+                                                                           class="footer__icon"></a><a
+      href="https://github.com/tychtych" class="footer__icon-link"><img src="images/fb.svg" alt="facebook icon"
+                                                                        class="footer__icon"></a></ul>
+  </footer>
+</div>
+<script src="index.77014994a60d91f63aac.js,articles.8dd77a4536502a25effe.js"></script>
+</body>
+</html>
