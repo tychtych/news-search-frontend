@@ -8,4 +8,7 @@ For hot reload development
 to collect a project
 
 
+Link to GitHub Pages:
+https://tychtych.github.io/news-search-frontend/
+
 
