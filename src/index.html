@@ -22,7 +22,8 @@
       <ul class="header__menu">
         <li class="header__item header__item_select"><a href="#" class="header__link"> Главная </a></li>
         <li class="header__item hidden"><a href="articles.html" class="header__link">Сохраненные статьи </a></li>
-        <button class="button button__signin"> Авторизоваться </button>
+        <li class="header__item"><button class="button button__signin"> Авторизоваться </button></li>
+
       </ul>
 
   </header>
@@ -78,7 +79,7 @@
           <a href="https://www.yosemite.com/safe-travel-to-yosemite-ca/" class="found-card__item" target="_blank">
             <div class="found-card__media">
             <img src="<%=require('./vendor/images/card1.png')%>" alt="violet plants" class="found-card__image">
-              <svg alt="bookmark which helps to save the article" class="found-card__save-icon"  width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg class="found-card__save-icon"  width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect width="40" height="40" rx="8" fill="white"/>
                 <path class="test" d="M19.3822 23.7137L14 27.9425V12L26 12V27.9425L20.6178 23.7137L20 23.2283L19.3822 23.7137Z" stroke="#B6BCBF" stroke-width="2"/>
               </svg>
@@ -192,23 +193,20 @@
 
 
   <footer class="footer">
-    <p class="footer__copyright"> &#169; 2020 Supersite, Powered by  News API </p>
+    <p class="footer__copyright"> &#169; News Search, Powered by  News API </p>
     <ul class="footer__links">
-      <div class="footer__wrap">
-      <li class="footer__item"><a href="" class="footer__link"> Главная </a></li>
-        <li class="footer__item"><a href="https://practicum.yandex.com/" class="footer__link"> Яндекс.Практикум </a></li>
-      </div>
-      <a href="https://github.com/tychtych" class="footer__icon-link"><img src="<%=require('./vendor/images/github.svg')%>" alt="github icon" class="footer__icon"></a>
-      <a href="https://github.com/tychtych" class="footer__icon-link"><img src="<%=require('./vendor/images/fb.svg')%>" alt="facebook icon" class="footer__icon"></a>
+      <li>
+        <div class="footer__wrap">
+          <ul class="footer__links">
+            <li class="footer__item"><a href="" class="footer__link"> Главная </a></li>
+            <li class="footer__item"><a href="https://practicum.yandex.com/" class="footer__link"> Яндекс.Практикум </a></li>
+          </ul>
+        </div>
+      </li>
+      <li><a href="https://github.com/tychtych" class="footer__icon-link"><img src="<%=require('./vendor/images/github.svg')%>" alt="github icon" class="footer__icon"></a></li>
+      <li><a href="https://github.com/tychtych" class="footer__icon-link"><img src="<%=require('./vendor/images/fb.svg')%>" alt="facebook icon" class="footer__icon"></a></li>
     </ul>
-    <!--
-    <div class="footer__social">
-      <a href="https://github.com/tychtych" class="footer__icon-link"><img src="./vendor/images/github.svg" alt="github icon" class="footer__icon"></a>
-      <a href="https://github.com/tychtych" class="footer__icon-link"><img src="./vendor/images/fb.svg" alt="facebook icon" class="footer__icon"></a>
-    </div>
-    -->
   </footer>
-
 </div>
 
 <script src="<%= htmlWebpackPlugin.files.js[0]%>"></script>

@@ -3,6 +3,7 @@
   line-height: 24px;
   color: #1A1B22;
   margin-right: 41px;
+  list-style: none;
 }
 
 .footer__item:first-child {

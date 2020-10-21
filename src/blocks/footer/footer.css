@@ -3,6 +3,7 @@
 @import url('__link/__link.css');
 @import url('__item/__item.css');
 @import url('__icon-link/__icon-link.css');
+@import url('__wrap/__wrap.css');
 .footer {
   padding: 32px 104px 26px 104px;
   display: flex;
