@@ -1,4 +1,5 @@
 @import url('__logo/__logo.css');
+@import url('__nav/__nav.css');
 @import url('__menu/__menu.css');
 @import url('__link/__link.css');
 @import url('__item/__item.css');
@@ -11,7 +12,9 @@
 @import url('__link/_dark/_dark.css');
 @import url('__item/_select_dark/_select_dark.css');
 @import url('__icon-user/__icon-user.css');
-
+@import url('__hamburger/__hamburger.css');
+@import url('__hamburger-icon/__hamburger-icon.css');
+@import url('__menu/_white/_white.css');
 
 
 .header {
@@ -23,3 +26,23 @@
   border-bottom: 1px solid rgba(229, 229, 229, .3);
   box-shadow: inset 0px -1px 0px rgba(255, 255, 255, 0.2);
  }
+
+.header.black {
+  background-color: #1A1B22;
+}
+
+.header.white {
+  background-color: #FFFF;
+}
+
+@media screen and (max-width: 1000px) {
+  .header {
+    padding: 14px 40px 0px;
+  }
+}
+
+@media screen and (max-width: 708px) {
+  .header {
+    padding: 16px 16px 16px;
+  }
+}

@@ -1,19 +1,21 @@
 .found-card__item {
   text-decoration: none;
   color: #1A1B22;
-  max-width: 400px;
-  min-width: 288px;
   width: 100%;
   background-color: #FFFFFF;
-  min-height: 576px;
   border-radius: 16px;
   display: flex;
   flex-direction: column;
   position: relative;
-  margin-bottom: 18px;
-  margin-right: 16px;
+
 }
 
 .found-card__item:last-child {
   margin-right: 0;
+}
+
+@media screen and (max-width: 900px) {
+  .found-card__item {
+    max-width: 240px;
+  }
 }

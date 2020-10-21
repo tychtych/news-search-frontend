@@ -8,3 +8,9 @@
 .footer__item:first-child {
   margin-right: 10px;
 }
+
+@media screen and (max-width: 425px) {
+  .footer__item {
+    margin-bottom: 20px;
+  }
+}

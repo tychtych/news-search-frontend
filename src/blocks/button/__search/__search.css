@@ -20,3 +20,12 @@
 .button__search:active {
   background: #305185;
 }
+
+@media screen and (max-width:396px) {
+  .button__search {
+    min-width: 288px;
+    width: 100%;
+    margin-top: 16px;
+  }
+}
+

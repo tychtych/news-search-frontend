@@ -2,9 +2,26 @@
 @import url('__links/__links.css');
 @import url('__link/__link.css');
 @import url('__item/__item.css');
+@import url('__icon-link/__icon-link.css');
 .footer {
   padding: 32px 104px 26px 104px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+
+@media screen and (max-width: 768px) {
+  .footer {
+    padding: 24px 40px 18px;
+
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .footer {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    padding: 20px 16px;
+  }
 }

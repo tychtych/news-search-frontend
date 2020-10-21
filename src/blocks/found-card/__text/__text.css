@@ -2,4 +2,16 @@
   font-size: 16px;
   line-height: 22px;
   margin-bottom: 18px;
+  min-width: 192px;
+  max-width: 352px;
+}
+
+@media screen and (max-width: 768px){
+  .found-card__text {
+
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+  }
 }

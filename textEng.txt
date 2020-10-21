@@ -1,0 +1,29 @@
+Header:
+
+Home
+Saved Articles
+Sign in
+
+
+Intro
+
+ What's up in the world?
+  Find and keep up with news articles on any topic and save them!
+  Find news on...
+  Search
+
+   Searching articles...
+
+   Oops...
+   No articles were found.
+    About the Developer
+    Front-end Developer with experience building responsive websites and specializing in HTML5, SCSS, Vanilla JavaScript and frameworks Vue.js and React. I have hands-on experience with AWS services as I was migrating recently the current project from Inmotion to AWS! Now I am preparing to pass the Cloud Practitioner exam (yes, I had a great practice first before the exam itself ha-ha!)
+           I really enjoy working both independently and within a team to deliver a quality product.
+           Moreover, I keen on minimalistic and elegant design solutions for users - I study a lot of material on UI
+
+
+
+            Search Results
+ August 2, 2019
+  Safe Travel to Yosemite Mariposa County
+   Yes! Due to a number of factors, Yosemite Mariposa County is one of the safest places to visit in California. Our county is one of just a handful that has been allowed the privilege of operating under reduced restrictions that allow visitors for a safe, stress-free and enjoyable getaway.

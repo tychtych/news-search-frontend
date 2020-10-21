@@ -5,3 +5,17 @@
   min-width: 100px;
   background: none;
 }
+
+.button__signin:hover {
+  background-color: rgba(0,0,0,0.2);
+}
+
+@media screen and (max-width: 708px) {
+  .button__signin {
+    width: 90%;
+    padding: 15px 74px;
+    margin-left: 16px;
+    margin-bottom: 24px;
+  }
+
+}

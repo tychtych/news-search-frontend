@@ -1,5 +1,6 @@
 .intro__search {
   max-width: 608px;
+  min-width: 288px;
   box-sizing: border-box;
   border-radius: 100px;
   background-color: #FFFFFF;
@@ -7,4 +8,10 @@
   width: 100%;
   display: flex;
   justify-content: flex-end;
+}
+
+@media screen and (max-width:396px) {
+  .intro__search {
+    display: block;
+  }
 }

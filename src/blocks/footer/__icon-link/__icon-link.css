@@ -1,0 +1,17 @@
+.footer__icon-link {
+  margin-right: 26px;
+}
+
+@media screen and (max-width: 425px){
+
+  .footer__icon-link:first-of-type {
+    margin-left: 0;
+  }
+
+  .footer__icon-link {
+    margin-left: 29px;
+    margin-right: 0px;
+  }
+
+
+}

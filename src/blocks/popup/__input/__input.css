@@ -6,8 +6,12 @@
   font-size: 14px;
   line-height: 17px;
   box-sizing: border-box;
-  padding: 5px 6px 13px;
+  padding: 10px 6px 7px;
   margin-bottom: 24px;
+}
+
+.popup__input:focus {
+  outline: none;
 }
 
 

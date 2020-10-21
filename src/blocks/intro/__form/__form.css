@@ -1,3 +1,16 @@
 .intro__form {
   padding-bottom: 80px;
 }
+
+@media screen and (max-width: 768px) {
+  .intro__form {
+    padding-bottom: 48px;
+  }
+}
+
+
+@media screen and (max-width: 396px) {
+  .intro__form {
+    padding-bottom: 120px;
+  }
+}

@@ -14,56 +14,61 @@
  <div class="wrapper">
   <header class="header">
     <img src="<%=require('./vendor/images/NewsExplorer.svg')%>" alt="" class="header__logo">
-    <nav class="header__nav">
+    <button class="header__hamburger" id="hamburger">
+      <img src="<%=require('./vendor/images/menu.svg')%>" alt="dropdown menu" class="header__hamburger-icon">
+    </button>
+
       <ul class="header__menu">
-        <li class="header__item header__item_select"><a href="#" class="header__link"> Home </a></li>
-        <li class="header__item"><a href="articles.html" class="header__link"> Saved Articles </a></li>
-        <button class="button button__signin"> Sign in</button>
+        <li class="header__item header__item_select"><a href="#" class="header__link"> Главная </a></li>
+        <li class="header__item hidden"><a href="articles.html" class="header__link">Сохраненные статьи </a></li>
+        <button class="button button__signin"> Авторизоваться </button>
       </ul>
-    </nav>
+
   </header>
     <section class="intro">
       <div class="intro__content">
-      <h1 class="intro__title"> What's up in the world?</h1>
-      <p class="intro__subtitle"> Find and keep up with news articles on any topic and save them!</p>
+      <h1 class="intro__title">Что творится в мире?</h1>
+      <p class="intro__subtitle">Находите самые свежие статьи на любую тему и сохраняйте в своём личном кабинете.</p>
         <form method="post" class="intro__form" id="searchForm">
       <div class="intro__search">
-          <input type="text" id="search-input" class="intro__searchInput" placeholder="Find news on..."
+          <input type="text" id="search-input" class="intro__searchInput" placeholder="Введите тему новости"
                  minlength="2"
                  maxlength="20">
-          <button class="button button__search" type="submit"> Search </button>
+        <button class="button button__search" type="submit"> Искать </button>
       </div>
+
         </form>
       </div>
     </section>
  </div>
    <section class="loader hidden">
      <i class="loader__circle"></i>
-     <p class="loader__title"> Searching articles... </p>
+     <p class="loader__title">Идет поиск новостей...</p>
    </section>
 
   <section class="no-results hidden">
     <img class="no-results__image" src="<%=require('./vendor/images/not-found.svg')%>"
          alt="unexpected error">
-    <h2 class="no-results__title">Oops...</h2>
+    <h2 class="no-results__title">Ничего не найдено</h2>
     <p class="no-results__subtitle">
-      No articles were found.
+      К сожалению по вашему запросу
+      ничего не найдено.
     </p>
   </section>
 
    <section class="about">
      <img src="<%=require('./vendor/images/avatar.png')%>" alt="picture with the project's author" class="about__avatar">
      <div class="about__content">
-     <h2 class="about__title"> About the Developer</h2>
-     <p class="about__paragraph">Front-end Developer with experience building responsive websites and specializing in HTML5, SCSS, Vanilla JavaScript and frameworks Vue.js and React. I have hands-on experience with AWS services as I was migrating recently the current project from Inmotion to AWS! Now I am preparing to pass the Cloud Practitioner exam (yes, I had a great practice first before the exam itself ha-ha!)
-       I really enjoy working both independently and within a team to deliver a quality product.</p>
-       <p class="about__paragraph"> Moreover, I keen on minimalistic and elegant design solutions for users - I study a lot of material on UI/UX and constantly work on my skills.</p>
+     <h2 class="about__title">Об авторе</h2>
+     <p class="about__paragraph">Это блок с описанием автора проекта. Здесь следует указать, как вас зовут, чем вы занимаетесь, какими технологиями разработки владеете.
+       Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем можете помочь потенциальным заказчикам.</p>
+       <p class="about__paragraph"> Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем можете помочь потенциальным заказчикам. </p>
      </div>
    </section>
 
   <main class="main">
     <section class="search-results">
-      <h2 class="search-results__title"> Search Results </h2>
+      <h2 class="search-results__title">Результаты поиска</h2>
     </section>
 
     <section class="found-card">
@@ -79,65 +84,69 @@
 
             </div>
             <blockquote class="found-card__description">
-            <time datetime="August 2, 2019" class="found-card__date"> August 2, 2019 </time>
-              <h3 class="found-card__title"> Safe Travel to Yosemite Mariposa County </h3>
-              <p class="found-card__text"> Yes! Due to a number of factors, Yosemite Mariposa County is one of the safest places to visit in California. Our county is one of just a handful that has been allowed the privilege of operating under reduced restrictions that allow visitors for a safe, stress-free and enjoyable getaway.
-              </p>
+            <time datetime="August 2, 2019" class="found-card__date">2 августа, 2019</time>
+              <h3 class="found-card__title">Национальное достояние – парки</h3>
+              <p class="found-card__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
             </blockquote>
-            <cite class="found-card__source"> Yosemite.com </cite>
+            <cite class="found-card__source"> Лента.ру </cite>
           </a>
 
-        <a href="https://www.mymotherlode.com/news/local/1307816/yosemites-blue-jay-fire-over-6300-acres.html" class="found-card__item" target="_blank">
-          <div class="found-card__media">
-            <img src="<%=require('./vendor/images/crard2.png')%>" alt="violet plants" class="found-card__image">
-            <img src="<%=require('./vendor/images/saveicon.svg')%>" alt="bookmark which helps to save the article" class="found-card__save-icon">
-          </div>
-          <blockquote class="found-card__description">
-            <time datetime="August 2, 2019" class="found-card__date"> Oct 9, 2020 </time>
-            <h3 class="found-card__title">Yosemite’s Blue Jay Fire Over 6,300 Acres</h3>
-            <p class="found-card__text">The Blue Jay Fire, near the Yosemite Creek drainage and south of 10 Lakes Trail, is 6,334 acres, and 50-percent contained. Yosemite officials report that it has been creeping and smoldering through pockets of debris and dead and dying trees. </p>
-          </blockquote>
-          <cite class="found-card__source"> mymotherlode.com </cite>
-        </a>
+                <a href="https://www.mymotherlode.com/news/local/1307816/yosemites-blue-jay-fire-over-6300-acres.html" class="found-card__item" target="_blank">
+                  <div class="found-card__media">
+                    <img src="<%=require('./vendor/images/crard2.png')%>" alt="violet plants" class="found-card__image">
+                    <img src="<%=require('./vendor/images/saveicon.svg')%>" alt="bookmark which helps to save the article" class="found-card__save-icon">
+                  </div>
+                  <blockquote class="found-card__description">
+                    <time datetime="August 2, 2019" class="found-card__date">2 августа, 2019</time>
+                    <h3 class="found-card__title">Лесные огоньки: история одной фотографии</h3>
+                    <p class="found-card__text">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного
+                      из местных чудес природы.</p>
+                  </blockquote>
+                  <cite class="found-card__source"> Медуза </cite>
+                </a>
 
-        <a href="https://www.mercurynews.com/2020/09/29/yosemite-national-park-to-drop-day-use-reservations-nov-1/" class="found-card__item" target="_blank">
-          <div class="found-card__media">
-            <img src="<%=require('./vendor/images/card3.png')%>" alt="violet plants" class="found-card__image">
-            <img src="<%=require('./vendor/images/saveicon.svg')%>" alt="bookmark which helps to save the article" class="found-card__save-icon">
-          </div>
-          <blockquote class="found-card__description">
-            <time datetime="August 2, 2019" class="found-card__date"> Oct 9, 2020 </time>
-            <h3 class="found-card__title">Yosemite National Park to drop day-use reservations Nov. 1</h3>
-            <p class="found-card__text">Four months after Yosemite National Park limited the number of people who can visit due to concerns over the spread of coronavirus, park officials on Tuesday announced they are fully reopening the gates.</p>
-          </blockquote>
-          <cite class="found-card__source"> Mercury News </cite>
-        </a>
-        </div>
-      <button class="button button__more"> Load More </button>
-    </section>
+                <a href="https://www.mercurynews.com/2020/09/29/yosemite-national-park-to-drop-day-use-reservations-nov-1/" class="found-card__item" target="_blank">
+                  <div class="found-card__media">
+                    <img src="<%=require('./vendor/images/card3.png')%>" alt="violet plants" class="found-card__image">
+                    <img src="<%=require('./vendor/images/saveicon.svg')%>" alt="bookmark which helps to save the article" class="found-card__save-icon">
+                  </div>
+                  <blockquote class="found-card__description">
+                    <time datetime="August 2, 2019" class="found-card__date">2 августа, 2019</time>
+                    <h3 class="found-card__title">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h3>
+                    <p class="found-card__text">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...</p>
+                  </blockquote>
+                  <cite class="found-card__source">Риа</cite>
+                </a>
+                </div>
+
+              <button class="button button__more">Показать еще</button>
+            </section>
+
   </main>
 
   <div class="popup hidden" id="popup-login">
     <div class="popup__content">
       <img src="<%=require('./vendor/images/back.svg')%>" alt="close add" class="popup__close">
-      <h3 class="popup__title">Sign in</h3>
+      <h3 class="popup__title">Вход</h3>
 
       <form class="popup__form" name="new">
         <div class="popup__input-container">
-          <label for="add-email" class="popup__label"></label>
+          <label for="add-email" class="popup__label"> Email </label>
           <input id="add-email" type="text" name="email" class="popup__input popup__input_type_name"
-                 placeholder="Email" minlength="2" maxlength="30" required>
+                 placeholder="Введите почту" minlength="2" maxlength="30" required>
+
           <span id="error-add-name" class="popup__error-message popup__error-message_hidden"></span>
         </div>
         <div class="popup__input-container">
-          <label for="add-password" class="popup__label"></label>
+          <label for="add-password" class="popup__label"> Пароль </label>
           <input id="add-password" type="email" name="password" class="popup__input popup__input_type_link-url"
-                 placeholder="Password" required>
+                 placeholder="Введите пароль" required>
           <span id="error-add-image" class="error-message error-message__hidden"></span>
         </div>
-        <button class="popup_button"> Sign in </button>
-        <p class="popup__alternative"> or <a href="" class="popup__link">Sign Up</a></p>
+        <button class="popup_button"> Войти </button>
+        <p class="popup__alternative"> или  <a href="" class="popup__link"> Зарегистрироваться </a></p>
       </form>
+
     </div>
   </div>
 
@@ -145,29 +154,29 @@
   <div class="popup hidden" id="popup-signup">
     <div class="popup__content">
       <img src="<%=require('./vendor/images/back.svg')%>" alt="close add" class="popup__close">
-      <h3 class="popup__title">Sign up</h3>
+      <h3 class="popup__title">Регистрация</h3>
 
       <form class="popup__form  popup__form_signup" name="signup">
         <div class="popup__input-container">
-          <label for="register-email" class="popup__label"></label>
+          <label for="register-email" class="popup__label"> Email </label>
           <input id="register-email" type="text" name="email" class="popup__input popup__input_type_name"
-                 placeholder="Email" minlength="2" maxlength="30" required>
+                 placeholder="Введите почту" minlength="2" maxlength="30" required>
           <span id="error-register-email" class="popup__error-message popup__error-message_hidden"></span>
         </div>
         <div class="popup__input-container">
-          <label for="register-password" class="popup__label"></label>
+          <label for="register-password" class="popup__label"> Пароль </label>
           <input id="register-password" type="email" name="password" class="popup__input popup__input_type_link-url"
-                 placeholder="Password" required>
+                 placeholder="Введите пароль" required>
           <span id="error-register-password" class="error-message error-message__hidden"></span>
         </div>
         <div class="popup__input-container">
-          <label for="register-name" class="popup__label"></label>
+          <label for="register-name" class="popup__label"> Имя </label>
           <input id="register-name" type="email" name="password" class="popup__input popup__input_type_link-url"
-                 placeholder="Name" required>
+                 placeholder="Введите свое имя" required>
           <span id="error-register-name" class="error-message error-message__hidden"></span>
         </div>
-        <button class="popup_button"> Sign in </button>
-        <p class="popup__alternative"> or <a href="" class="popup__link">Sign In</a></p>
+        <button class="popup_button"> Зарегистрироваться </button>
+        <p class="popup__alternative"> или <a href="" class="popup__link">Войти</a></p>
       </form>
     </div>
   </div>
@@ -175,17 +184,19 @@
   <div class="popup hidden" id="popup-success">
     <div class="popup__content popup__content_success">
       <img src="<%=require('./vendor/images/back.svg')%>" alt="close add" class="popup__close">
-      <h3 class="popup__title">The user is registered!</h3>
-      <button class="popup__link popup__link_type_success" type="button">Continue to sign in</button>
+      <h3 class="popup__title">Пользователь успешно зарегистрирован!</h3>
+      <button class="popup__link popup__link_type_success" type="button">Войти</button>
     </div>
   </div>
 
 
   <footer class="footer">
-    <p class="footer__copyright"> &#169; News Search, Powered by  News API </p>
+    <p class="footer__copyright"> &#169; 2020 Supersite, Powered by  News API </p>
     <ul class="footer__links">
-      <li class="footer__item"><a href="" class="footer__link"> About </a></li>
-      <li class="footer__item"><a href="https://practicum.yandex.com/" class="footer__link"> Practicum </a></li>
+      <div class="footer__wrap">
+      <li class="footer__item"><a href="" class="footer__link"> Главная </a></li>
+        <li class="footer__item"><a href="https://practicum.yandex.com/" class="footer__link"> Яндекс.Практикум </a></li>
+      </div>
       <a href="https://github.com/tychtych" class="footer__icon-link"><img src="<%=require('./vendor/images/github.svg')%>" alt="github icon" class="footer__icon"></a>
       <a href="https://github.com/tychtych" class="footer__icon-link"><img src="<%=require('./vendor/images/fb.svg')%>" alt="facebook icon" class="footer__icon"></a>
     </ul>

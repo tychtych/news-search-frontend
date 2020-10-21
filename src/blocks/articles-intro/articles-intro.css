@@ -6,3 +6,9 @@
 .articles-intro {
   padding: 40px 104px 56px;
 }
+
+@media screen and (max-width: 768px) {
+  .articles-intro {
+    padding: 24px 40px 32px;
+  }
+}

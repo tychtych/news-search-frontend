@@ -2,5 +2,11 @@
 
 .search-results {
   background-color: #F5F6F7;
-  padding: 0 104px 0 104px;
+}
+
+@media screen and (max-width: 768px){
+  .search-results {
+    padding: 0;
+
+  }
 }

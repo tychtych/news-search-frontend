@@ -1,5 +1,11 @@
 .about__paragraph {
   max-width: 600px;
+  min-width: 288px;
   font-size: 18px;
   line-height: 24px;
+  margin: 0;
+}
+
+.about__paragraph {
+  margin-bottom: 12px;
 }
