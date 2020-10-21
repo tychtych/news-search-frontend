@@ -34,8 +34,10 @@
         <form method="post" class="intro__form" id="searchForm">
       <div class="intro__search">
           <input type="text" id="search-input" class="intro__searchInput" placeholder="Введите тему новости"
+                 pattern="[А-ЯЁ][а-яё\s]+?(-[А-ЯЁ][а-яё\s]+)?"
                  minlength="2"
-                 maxlength="20">
+                 maxlength="20"
+                 required>
         <button class="button button__search" type="submit"> Искать </button>
       </div>
 
@@ -45,7 +47,7 @@
  </div>
    <section class="loader hidden">
      <i class="loader__circle"></i>
-     <p class="loader__title">Идет поиск новостей...</p>
+     <h2 class="loader__title">Идет поиск новостей...</h2>
    </section>
 
   <section class="no-results hidden">
@@ -86,7 +88,7 @@
 
             </div>
             <blockquote class="found-card__description">
-            <time datetime="August 2, 2019" class="found-card__date">2 августа, 2019</time>
+            <time datetime="2005-10-05" class="found-card__date">2 августа, 2019</time>
               <h3 class="found-card__title">Национальное достояние – парки</h3>
               <p class="found-card__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
             </blockquote>
@@ -99,7 +101,7 @@
                     <img src="<%=require('./vendor/images/saveicon.svg')%>" alt="bookmark which helps to save the article" class="found-card__save-icon">
                   </div>
                   <blockquote class="found-card__description">
-                    <time datetime="August 2, 2019" class="found-card__date">2 августа, 2019</time>
+                    <time datetime="2005-10-05" class="found-card__date">2 августа, 2019</time>
                     <h3 class="found-card__title">Лесные огоньки: история одной фотографии</h3>
                     <p class="found-card__text">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного
                       из местных чудес природы.</p>
@@ -113,7 +115,7 @@
                     <img src="<%=require('./vendor/images/saveicon.svg')%>" alt="bookmark which helps to save the article" class="found-card__save-icon">
                   </div>
                   <blockquote class="found-card__description">
-                    <time datetime="August 2, 2019" class="found-card__date">2 августа, 2019</time>
+                    <time datetime="2005-10-05" class="found-card__date">2 августа, 2019</time>
                     <h3 class="found-card__title">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h3>
                     <p class="found-card__text">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...</p>
                   </blockquote>
@@ -135,8 +137,11 @@
         <div class="popup__input-container">
           <label for="add-email" class="popup__label"> Email </label>
           <input id="add-email" type="text" name="email" class="popup__input popup__input_type_name"
-                 placeholder="Введите почту" minlength="2" maxlength="30" required>
-
+                 placeholder="Введите почту"
+                 pattern="([a-z0-9_\.\-]+)@([a-z0-9_\.\-]+)\.([a-z\.]{2,6})"
+                 minlength="2"
+                 maxlength="30"
+                 required>
           <span id="error-add-name" class="popup__error-message popup__error-message_hidden"></span>
         </div>
         <div class="popup__input-container">
@@ -162,18 +167,22 @@
         <div class="popup__input-container">
           <label for="register-email" class="popup__label"> Email </label>
           <input id="register-email" type="text" name="email" class="popup__input popup__input_type_name"
-                 placeholder="Введите почту" minlength="2" maxlength="30" required>
+                 placeholder="Введите почту"
+                 pattern="([a-z0-9_\.\-]+)@([a-z0-9_\.\-]+)\.([a-z\.]{2,6})"
+                 minlength="2"
+                 maxlength="30"
+                 required>
           <span id="error-register-email" class="popup__error-message popup__error-message_hidden"></span>
         </div>
         <div class="popup__input-container">
           <label for="register-password" class="popup__label"> Пароль </label>
-          <input id="register-password" type="email" name="password" class="popup__input popup__input_type_link-url"
+          <input id="register-password" type="password" name="password" class="popup__input popup__input_type_link-url"
                  placeholder="Введите пароль" required>
           <span id="error-register-password" class="error-message error-message__hidden"></span>
         </div>
         <div class="popup__input-container">
           <label for="register-name" class="popup__label"> Имя </label>
-          <input id="register-name" type="email" name="password" class="popup__input popup__input_type_link-url"
+          <input id="register-name" type="text" minlength="5" name="password" class="popup__input popup__input_type_link-url"
                  placeholder="Введите свое имя" required>
           <span id="error-register-name" class="error-message error-message__hidden"></span>
         </div>
