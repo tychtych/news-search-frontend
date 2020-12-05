@@ -24,8 +24,9 @@
   background-image: url("../../../vendor/images/bookmark-saved.svg");
 }
 
-
-
+.found-card__save-icon.disabled {
+  background-image: url("../../../vendor/images/bookmark.svg")
+}
 
 .disabled .test:hover:disabled {
   fill: black;
@@ -34,7 +35,6 @@
 .found-card__save-icon:active {
   fill: #2a65cc;
 }
-
 .found-card__save-icon:visited {
   fill: #2a65cc;
 }

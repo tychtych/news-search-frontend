@@ -70,7 +70,6 @@ headerObj.render(userLoggedIn);
 //event handler for saving the article
 const cardEventHandlers = {
   saveButton: (keyword, title, description, publishedAt, source, url, urlToImage) => {
-    console.log(keyword, title, description, publishedAt, source, url, urlToImage)
     MAIN_API.createArticle(keyword, title, description, publishedAt, source, url, urlToImage)
       .then(data => console.log(data))
   }

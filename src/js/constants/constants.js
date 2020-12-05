@@ -3,7 +3,7 @@ import NewsApi from "../api/NewsApi";
 
 //API
 const MAIN_API = new MainApi('https://api.tychpress.ga');
-const NEWS_API = new NewsApi('https://newsapi.org', 'abfd7572d42a46a1922889a2580248d3');
+const NEWS_API = new NewsApi('https://nomoreparties.co', 'abfd7572d42a46a1922889a2580248d3');
 
 //web elements
 

@@ -5,7 +5,7 @@ export default class NewsApi {
   }
 
   getNews(keyword) {
-    return fetch(`${this.url}/v2/everything?q=${keyword}&sortBy=popularity&apiKey=${this.apiKey}`)
+    return fetch(`${this.url}/news/v2/everything?q=${keyword}&sortBy=popularity&apiKey=${this.apiKey}`)
       .then(res => {
         if (res.ok) {
           return res.json();

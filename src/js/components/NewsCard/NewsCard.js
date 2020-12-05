@@ -51,13 +51,13 @@ export default class NewsCard {
         </a>`;
   }
 
-  renderCard() {
+  renderCard(isLoggedIn) {
     this.cardContainer.insertAdjacentHTML('beforeend', this.card);
     if (window.location.pathname === '/articles.html') {
       this.cardContainer.insertAdjacentHTML('beforeend', this.savedCard);
       this._setDeleteHandlers();
     }
-    this._setHandlers();
+    this._setHandlers(isLoggedIn);
   }
 
   renderSavedCard() {
@@ -69,7 +69,7 @@ export default class NewsCard {
     if (!isLoggedIn) {
       this.cardContainer.querySelectorAll('.found-card__info').forEach(item => item.textContent = '');
       this.cardContainer.querySelectorAll('.found-card__save-icon').forEach(item => {
-        item.classList.add('disabled', 'true');
+        item.setAttribute('disabled', true);
       });
       this.cardContainer.querySelectorAll('.found-card__info').forEach(item => item.textContent = 'Войдите, чтобы сохранять статьи');
       this._renderTooltip()
@@ -116,8 +116,17 @@ export default class NewsCard {
     }
   }
 
-  _setHandlers() {
+  _setHandlers(isLoggedIn) {
     const saveButton = this.cardContainer.querySelectorAll('.found-card__save-icon');
+
+    if(!isLoggedIn) {
+      saveButton.forEach(button => {
+        button.addEventListener('click', () => {
+          button.setAttribute('disabled', true);
+          button.classList.add('disabled')
+        })
+      })
+    }
 
     saveButton.forEach(button => {
       button.addEventListener('click', (e) => {

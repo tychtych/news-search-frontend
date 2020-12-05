@@ -65,7 +65,7 @@ export default class NewsCardList {
 
     while (this.cardIndexToRender < nextPageIndex && this.cardIndexToRender < this.cardsArray.length) {
       const cardHtml = new NewsCard(this.resultContainer, this.cardsArray[this.cardIndexToRender], this.eventHandlers, input);
-      cardHtml.renderCard();
+      cardHtml.renderCard(isLoggedIn);
       cardHtml.renderIcon(isLoggedIn);
       cardHtml.renderDeleteIcon();
       this.cardIndexToRender++;
