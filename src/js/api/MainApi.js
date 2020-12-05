@@ -1,19 +1,9 @@
 export default class MainApi {
-  constructor(baseUrl, token) {
+  constructor(baseUrl) {
     this.baseUrl = baseUrl;
-    this.token = token;
   }
 
-  //successHandler = (response) => {
-    //if (response.ok) {
-      //return response.json();
-    //}
-    //return Promise.reject(`Ошибка ${response.status}`)
-  //}
-
-  signup(data) {
-    const {email, password, name} =  data;
-
+  signup(email, password, name) {
     return fetch(`${this.baseUrl}/signup`, {
       method: 'POST',
       headers: {
@@ -25,19 +15,11 @@ export default class MainApi {
         name: name
       })
     })
-      .then(res => {
-        if (res.ok) {
-          return res.json();
-        }
-        return Promise.reject(`Ошибка ${res.status}`)
-      })
-      .catch(errorMessage => {
-        throw new Error(errorMessage)
-      })
+      .then(this._handleResponse)
+      .catch(this._handleError)
   }
 
-  signin(data) {
-    const {email, password} = data;
+  signin(email, password) {
     return fetch(`${this.baseUrl}/signin`, {
       method: 'POST',
       headers: {
@@ -48,100 +30,77 @@ export default class MainApi {
         password: password,
       })
     })
+      .then(this._handleResponse)
       .then(res => {
-        if (res.ok) {
-          return res.json();
-        }
-        return Promise.reject(`Ошибка ${res.status}`)
+        localStorage.setItem('token', res.token);
       })
-      .catch(errorMessage => {
-        throw new Error(errorMessage)
-      })
+      .catch(this._handleError)
   }
 
-  getUserData(token) {
-    return fetch(`${this.baseUrl}/users/me`, {
-      headers: {
-        "Content-Type": 'application/json',
-        Authorization: `Bearer ${token}`,
-      }
-    })
-      .then(res => {
-        if (res.ok) {
-          return res.json();
-        }
-        return Promise.reject(`Ошибка: ${res.status}`);
-      })
-      .catch(errorMessage => {
-        throw new Error(errorMessage)
-      })
+  logout() {
+    localStorage.removeItem("token")
+    return Promise.resolve();
+  }
+
+  getUserData() {
+    return fetch(`${this.baseUrl}/users/me`, {headers: this._getAuthenticatedHeaders()})
+      .then(this._handleResponse)
+      .catch(this._handleError)
   }
 
   getArticles() {
-    return fetch (`${this.baseUrl}/articles`, {
-      headers: {
-        "Content-Type": 'application/json',
-        Authorization: `Bearer ${localStorage.getItem('token')}`,
-      }
-    })
-      .then(res => {
-        if (res.ok) {
-          return res.json();
-        }
-        return Promise.reject(`Ошибка: ${res.status}`);
-      })
-      .catch(errorMessage => {
-        throw new Error(errorMessage)
-      })
+    return fetch(`${this.baseUrl}/articles`, {headers: this._getAuthenticatedHeaders()})
+      .then(this._handleResponse)
+      .catch(this._handleError)
   }
 
-  createArticle(data) {
-    const { keyword, title, description, publishedAt, source, url, urlToImage} = data;
-
+  createArticle(keyword, title, description, publishedAt, source, url, urlToImage) {
     return fetch(`${this.baseUrl}/articles`, {
       method: 'POST',
-      headers: {
-        authorization: `Bearer ${localStorage.getItem('token')}`,
-        "Content-Type": 'application/json'
-      },
+      headers: this._getAuthenticatedHeaders(),
       body: JSON.stringify({
-        keyword : keyword,
-        title :  title,
-        text : description,
-        date : publishedAt,
-        source: source.name,
-        link : url,
-        image : urlToImage
+        keyword: keyword,
+        title: title,
+        text: description,
+        date: publishedAt,
+        source: source,
+        link: url,
+        image: urlToImage
       })
     })
-      .then(res => {
-        if (res.ok) {
-          return res.json();
-        }
-        return Promise.reject(`Ошибка ${res.status}`)
-      })
-      .catch(errorMessage => {
-        throw new Error(errorMessage)
-      })
+      .then(this._handleResponse)
+      .catch(this._handleError)
   }
 
   removeArticle(articleId) {
-    return fetch(`${this.baseUrl}/articles/articleId`,{
+    return fetch(`${this.baseUrl}/articles/${articleId}`, {
       method: 'DELETE',
-      headers: {
-        authorization: `Bearer ${localStorage.getItem('token')}`,
-        "Content-Type": 'application/json'
-      }
+      headers: this._getAuthenticatedHeaders()
     })
-      .then(res => {
-        if (res.ok) {
-          return res.json();
-        }
-        return Promise.reject(`Ошибка ${res.status}`)
-      })
-      .catch(errorMessage => {
-        throw new Error(errorMessage)
-      })
+      .then(this._handleResponse)
+      .catch(this._handleError)
   }
 
+  _handleResponse(res) {
+    if (res.ok) {
+      return res.json();
+    } else if (res.status === 401) {
+      localStorage.removeItem('token');
+      return Promise.reject("Пользователь не авторизован в системе");
+    }
+    return Promise.reject(`Ошибка ${res.status}`);
+  }
+
+  _handleError(err) {
+    throw new Error(err);
+  }
+
+  _getAuthenticatedHeaders() {
+    const token = localStorage.getItem('token');
+
+    return {
+      "Authorization": token && `Bearer ${token}`,
+      "Content-Type": 'application/json'
+    }
+  }
 }

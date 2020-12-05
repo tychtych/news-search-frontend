@@ -1,10 +1,75 @@
 .found-card__save-icon {
+  background-image: url("../../../vendor/images/bookmark.svg");
+  border: none;
+  border-radius: 8px;
+  box-sizing: border-box;
+  width: 40px;
+  height: 40px;
   cursor: pointer;
+  background-color: #fff;
+  padding: 13px;
+  outline: none;
+  background-repeat: no-repeat;
+  background-position: center;
   position: absolute;
-  right: 24px;
   top: 24px;
+  right: 24px
+}
+
+.found-card__save-icon:hover {
+  background-image: url("../../../vendor/images/bookmark-hover.svg");
+}
+
+.found-card__save-icon.active {
+  background-image: url("../../../vendor/images/bookmark-saved.svg");
+}
+
+
+
+
+.disabled .test:hover:disabled {
+  fill: black;
+}
+
+.found-card__save-icon:active {
+  fill: #2a65cc;
+}
+
+.found-card__save-icon:visited {
+  fill: #2a65cc;
 }
 
 .test:hover {
-  stroke: red;
+  stroke: #2a65cc;
+  fill: #2a65cc;
 }
+
+.test:hover:disabled{
+  stroke: #74777e;
+  fill: #f1f1f3;
+}
+
+
+
+.disabled {
+  stroke: #74777e;
+  fill: #f1f1f3;
+}
+
+.noHover{
+  stroke: #74777e;
+  fill: #f1f1f3;
+}
+
+.noHover:hover{
+  stroke: #74777e;
+  fill: #f1f1f3;
+}
+
+
+
+
+
+
+
+

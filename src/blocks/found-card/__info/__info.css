@@ -1,4 +1,4 @@
-.found-card__delete {
+.found-card__info {
   font-family: 'Roboto', Arial, sans-serif;
   border-radius: 10px;
   text-align: center;
@@ -17,12 +17,14 @@
   z-index: 3;
   display: flex;
   align-items: center;
+  opacity: 0;
 }
 
+/*
 @media screen and (max-width: 1139px) {
-  .found-card__delete {
-    display: none;
+  .found-card__info {
+    visibility: hidden;
   }
 }
-
+*/
 

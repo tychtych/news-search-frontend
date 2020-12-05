@@ -18,118 +18,16 @@
       <ul class="header__menu header__menu_white">
         <li class="header__item  header__item_dark"><a href="index.html" class="header__link header__link_dark"> Главная </a></li>
         <li class="header__item header__item_dark header__item_select_dark" id="currentSelect"><a href="articles.html" class="header__link header__link_dark"> Сохраненные статьи</a></li>
-        <li class="header__item"> <button class="button button__user"> Грета <img src="<%=require('./vendor/images/logoutDark.svg')%>" alt="logout icon" class="header__icon-user"></button></li>
+        <li class="header__item"> <button class="button button__user"> <img src="<%=require('./vendor/images/logoutDark.svg')%>" alt="logout icon" class="header__icon-user"></button></li>
       </ul>
 
   </header>
 
   <section class="articles-intro">
-    <p class="articles-intro__subtitle">Сохраненные статьи</p>
-    <h2 class="articles-intro__title">Грета, у вас 5 сохранённых статей</h2>
-    <p class="articles-intro__keywords"> По ключевым словам: <span class="articles-intro__keywords-bold"> Nature, Cats </span>
-      и <span class="articles-intro__keywords-bold"> 2-м другим. </span>
-    </p>
+
   </section>
 
-  <section class="found-card">
-    <div class="found-card__container">
-
-      <a href="https://www.yosemite.com/safe-travel-to-yosemite-ca/" class="found-card__item" target="_blank">
-        <div class="found-card__media">
-          <p class="found-card__theme"> Природа </p>
-          <p class="found-card__delete"> Убрать из сохраненных </p>
-          <img src="<%=require('./vendor/images/card1.png')%>" alt="violet plants" class="found-card__image">
-          <div class="found-card__trashIcon"></div>
-          <!--
-          <img src="./vendor/images/trash.svg" alt="trashcan which helps to delete the article" class="found-card__save-icon">
-       -->
-        <blockquote class="found-card__description">
-          <time datetime="2005-10-05" class="found-card__date">2 августа, 2019</time>
-          <h3 class="found-card__title">Лесные огоньки: история одной фотографии</h3>
-          <p class="found-card__text">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного
-            из местных чудес природы.</p>
-        </blockquote>
-        <cite class="found-card__source"> Афиша </cite>
-        </div>
-      </a>
-
-      <a href="https://www.mymotherlode.com/news/local/1307816/yosemites-blue-jay-fire-over-6300-acres.html" class="found-card__item" target="_blank">
-        <div class="found-card__media">
-          <p class="found-card__theme"> Тайга </p>
-          <p class="found-card__delete"> Убрать из сохраненных </p>
-          <img src="<%=require('./vendor/images/crard2.png')%>" alt="violet plants" class="found-card__image">
-          <div class="found-card__trashIcon"></div>
-        </div>
-        <blockquote class="found-card__description">
-          <time datetime="2005-10-05" class="found-card__date">2 августа, 2019</time>
-          <h3 class="found-card__title">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h3>
-          <p class="found-card__text">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...</p>
-        </blockquote>
-        <cite class="found-card__source"> Медиазона </cite>
-      </a>
-
-      <a href="https://www.mercurynews.com/2020/09/29/yosemite-national-park-to-drop-day-use-reservations-nov-1/" class="found-card__item" target="_blank">
-        <div class="found-card__media">
-          <img src="<%=require('./vendor/images/card3.png')%>" alt="violet plants" class="found-card__image">
-          <p class="found-card__theme"> Парки </p>
-          <p class="found-card__delete"> Убрать из сохраненных </p>
-          <div class="found-card__trashIcon"></div>
-        </div>
-        <blockquote class="found-card__description">
-          <time datetime="2005-10-05" class="found-card__date">2 августа, 2019</time>
-          <h3 class="found-card__title">Национальное достояние – парки</h3>
-          <p class="found-card__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
-        </blockquote>
-        <cite class="found-card__source">Дзен</cite>
-      </a>
-
-      <a href="https://www.mercurynews.com/2020/09/29/yosemite-national-park-to-drop-day-use-reservations-nov-1/" class="found-card__item" target="_blank">
-        <div class="found-card__media">
-          <img src="<%=require('./vendor/images/card3.png')%>" alt="violet plants" class="found-card__image">
-          <p class="found-card__theme"> Парки </p>
-          <p class="found-card__delete"> Убрать из сохраненных </p>
-          <div class="found-card__trashIcon"></div>
-        </div>
-        <blockquote class="found-card__description">
-          <time datetime="2005-10-05" class="found-card__date">2 августа, 2019</time>
-          <h3 class="found-card__title">Национальное достояние – парки</h3>
-          <p class="found-card__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
-        </blockquote>
-        <cite class="found-card__source">Дзен</cite>
-      </a>
-
-      <a href="https://www.mymotherlode.com/news/local/1307816/yosemites-blue-jay-fire-over-6300-acres.html" class="found-card__item" target="_blank">
-        <div class="found-card__media">
-          <p class="found-card__theme"> Тайга </p>
-          <p class="found-card__delete"> Убрать из сохраненных </p>
-          <img src="<%=require('./vendor/images/crard2.png')%>" alt="violet plants" class="found-card__image">
-          <div class="found-card__trashIcon"></div>
-        </div>
-        <blockquote class="found-card__description">
-          <time datetime="2005-10-05" class="found-card__date">2 августа, 2019</time>
-          <h3 class="found-card__title">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h3>
-          <p class="found-card__text">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...</p>
-        </blockquote>
-        <cite class="found-card__source"> Медиазона </cite>
-      </a>
-
-      <a href="https://www.mymotherlode.com/news/local/1307816/yosemites-blue-jay-fire-over-6300-acres.html" class="found-card__item" target="_blank">
-        <div class="found-card__media">
-          <p class="found-card__theme"> Тайга </p>
-          <p class="found-card__delete"> Убрать из сохраненных </p>
-          <img src="<%=require('./vendor/images/crard2.png')%>" alt="violet plants" class="found-card__image">
-          <div class="found-card__trashIcon"></div>
-        </div>
-        <blockquote class="found-card__description">
-          <time datetime="2005-10-05" class="found-card__date">2 августа, 2019</time>
-          <h3 class="found-card__title">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h3>
-          <p class="found-card__text">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...</p>
-        </blockquote>
-        <cite class="found-card__source"> Медиазона </cite>
-      </a>
-    </div>
-    <button class="button button__more"> Load More </button>
-  </section>
+  <div class="cardsList__wrap"></div>
 
   <footer class="footer">
     <p class="footer__copyright"> &#169; News Search, Powered by  News API </p>

@@ -3,6 +3,7 @@
 import "../src/styles/index.css";
 import "../src/js/index";
 
+
 const hamburger = document.getElementById('hamburger');
 const navigationMenu = document.querySelector('.header__menu');
 const header = document.querySelector('.header');
@@ -25,5 +26,6 @@ function removeHamburger(e) {
 }
 
 mql.addEventListener('change', removeHamburger);
+
 
 
