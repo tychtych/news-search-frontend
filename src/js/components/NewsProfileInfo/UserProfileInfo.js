@@ -7,24 +7,23 @@ export class UserProfileInfo {
 
   renderProfile(username) {
     this.container.insertAdjacentHTML('afterbegin', templatesUserProfile.userProfile);
-    this.container.querySelector('.articles-intro__title').textContent = username + ', у вас';
+    this.container.querySelector('.articles-intro__title').textContent = username + ', you have';
     //this.container.querySelector('.articles-intro__keywords-bold').textContent = articles;
   }
 
   renderArticlesAmount(articles) {
     if  (articles ===  1) {
-      this.container.querySelector('.articles-intro__amount').textContent = articles +  ' сохраненная статья';
+      this.container.querySelector('.articles-intro__amount').textContent = articles +  ' saved article';
     } else if (articles > 1) {
-      this.container.querySelector('.articles-intro__amount').textContent = articles + ' сохраненных статей';
+      this.container.querySelector('.articles-intro__amount').textContent = articles + ' saved articles';
     }
-    //this.container.querySelector('.articles-intro__amount').textContent = articles;
   }
 
   setKeyWords(keyWords) {
     this.keyWords = keyWords;
 
     if (!keyWords || keyWords.length === 0) {
-      this.container.querySelector('.articles-intro__keywords').textContent = 'Сохраните статьи, чтобы увидеть ключевые слова';
+      this.container.querySelector('.articles-intro__keywords').textContent = 'Start saving articles to see keywords';
     }
 
     if (keyWords.length === 1) {
@@ -39,20 +38,13 @@ export class UserProfileInfo {
     if (keyWords.length === 3) {
       this.container.querySelector('.articles-intro__keywords-first').textContent = keyWords[0];
       this.container.querySelector('.articles-intro__keywords-second').textContent = ', ' + keyWords[1];
-      this.container.querySelector('.articles-intro__keywords-count').textContent = 'и ' + keyWords.slice(2).length + ' другому'
+      this.container.querySelector('.articles-intro__keywords-count').textContent = 'and ' + keyWords.slice(2).length + ' more'
     }
 
     if (keyWords.length > 3) {
       this.container.querySelector('.articles-intro__keywords-first').textContent = keyWords[0];
       this.container.querySelector('.articles-intro__keywords-second').textContent = ', ' + keyWords[1];
-      this.container.querySelector('.articles-intro__keywords-count').textContent = 'и ' + keyWords.slice(2).length + ' другим'
+      this.container.querySelector('.articles-intro__keywords-count').textContent = 'and ' + keyWords.slice(2).length + ' more'
     }
-
-
-
-
-    //this.container.querySelector('.articles-intro__keywords-first').textContent = keyWords[0];
-    //this.container.querySelector('.articles-intro__keywords-second').textContent = keyWords[1];
-    //this.container.querySelector('.articles-intro__keywords-count').textContent = keyWords.slice(2).length;
   }
 }

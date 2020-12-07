@@ -71,13 +71,13 @@ export default class NewsCard {
       this.cardContainer.querySelectorAll('.found-card__save-icon').forEach(item => {
         item.setAttribute('disabled', true);
       });
-      this.cardContainer.querySelectorAll('.found-card__info').forEach(item => item.textContent = 'Войдите, чтобы сохранять статьи');
+      this.cardContainer.querySelectorAll('.found-card__info').forEach(item => item.textContent = 'Sign in to save the article');
       this._renderTooltip()
     } else {
       this._renderTooltip()
       this.cardContainer.querySelectorAll('.found-card__info').forEach(item => item.textContent = '');
       this.cardContainer.querySelectorAll('.found-card__save-icon').forEach(item => item.removeAttribute('disabled'));
-      this.cardContainer.querySelectorAll('.found-card__info').forEach(item => item.textContent = 'Сохранить статью');
+      this.cardContainer.querySelectorAll('.found-card__info').forEach(item => item.textContent = 'Save the article');
     }
   }
 
@@ -111,7 +111,7 @@ export default class NewsCard {
     if (window.location.pathname === '/articles.html') {
       this.cardContainer.querySelectorAll('.found-card__save-icon').forEach(item => item.classList.add('hidden'))
       this.cardContainer.querySelectorAll('.found-card__trashIcon').forEach(item => item.classList.remove('hidden'));
-      this.cardContainer.querySelectorAll('.found-card__info').forEach(item => item.textContent = 'Убрать из сохраненных');
+      this.cardContainer.querySelectorAll('.found-card__info').forEach(item => item.textContent = 'Remove from saved');
       this._renderSavedArticlesTooltip();
     }
   }

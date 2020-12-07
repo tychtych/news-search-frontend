@@ -10,9 +10,9 @@ export default class Form {
     const errorElem = this.formElem.querySelector(`#error-${inputElem.id}`);
 
     const errorMessages = {
-      valueMissing: 'Это обязательное поле',
-      tooShort: 'Должно быть от 2 до 30 символов',
-      typeMismatch: 'Неправильный формат'
+      valueMissing: 'This field is required',
+      tooShort: 'Please enter from 2 to 30 characters',
+      typeMismatch: 'Invalid type'
     }
 
     if (inputElem.validity.valueMissing) {

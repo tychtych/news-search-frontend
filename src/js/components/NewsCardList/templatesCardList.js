@@ -1,7 +1,7 @@
 export const templatesCardList = {
   loader: `<section class="loader">
       <i class="loader__circle"></i>
-      <h2 class="loader__title">Идет поиск новостей...</h2>
+      <h2 class="loader__title">Searching news...</h2>
     </section>`,
 
   noResults: `<section class="no-results">
@@ -12,26 +12,25 @@ export const templatesCardList = {
         <circle cx="55.5" cy="33.5" r="1.5" fill="#D1D2D6"/>
         <circle cx="30.5" cy="33.5" r="1.5" fill="#D1D2D6"/>
       </svg>
-      <h2 class="no-results__title">Ничего не найдено</h2>
+      <h2 class="no-results__title">No  results</h2>
       <p class="no-results__subtitle">
-        К сожалению по вашему запросу
-        ничего не найдено.
+        Unfortunately, no results we found. Search suggestions: Check yourr spelling, try general words or try different words that mean the same thing.
       </p>
     </section>`,
 
   results: `<section class="found-card">
-      <h2 class="search-results__title">Результаты поиска</h2>
+      <h2 class="search-results__title">Search Results</h2>
       <div class="found-card__container">
 
       </div>
-      <button class="button button__more hidden">Показать еще</button>
+      <button class="button button__more hidden">Show More</button>
     </section>`,
 
   savedResults: `<section class="found-card">
       <div class="found-card__container">
 
       </div>
-      <button class="button button__more hidden">Показать еще</button>
+      <button class="button button__more hidden">Show More</button>
     </section>`,
 
   error: (errorMessage) => `<div>${errorMessage}</div>`
