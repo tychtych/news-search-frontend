@@ -132,8 +132,10 @@ export default class NewsCard {
       button.addEventListener('click', (e) => {
         e.preventDefault();
         e.stopImmediatePropagation();
-        button.classList.add('active');
-        this.eventHandlers.saveButton(this.keyword, this.title, this.description, this.publishedAt, this.source, this.url, this.urlToImage);
+        this.eventHandlers.saveButton(this.keyword, this.title, this.description, this.publishedAt, this.source, this.url, this.urlToImage)
+          .then(() => {
+            button.classList.add('active');
+          })
       });
     })
   };

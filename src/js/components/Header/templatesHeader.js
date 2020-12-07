@@ -17,7 +17,7 @@ export const templatesHeader = {
           </li>
         </template>`,
 
-    headerWhite: `<li class="header__item  header__item_dark"><a href="index.html" class="header__link header__link_dark"> Главная </a></li>
+    headerWhite: `<li class="header__item header__item_dark"><a href="index.html" class="header__link header__link_dark"> Главная </a></li>
         <li class="header__item header__item_dark header__item_select_dark" id="currentSelect"><a href="articles.html" class="header__link header__link_dark"> Сохраненные статьи</a></li>
         <li class="header__item">
         <button class="button button__user">

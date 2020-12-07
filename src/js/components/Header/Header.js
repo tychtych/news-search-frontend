@@ -10,7 +10,8 @@ export default class Header {
 
   render(isLoggedIn, username) {
     const headerMenu = this.headerContainer.querySelector('.header__menu');
-    const renderBlackOrWhite = this.location === '/articles.html' ? templatesHeader.headerWhite : templatesHeader.headerBlackLogged;
+
+    const renderBlackOrWhite = this.location === '/news-search-frontend/articles.html' ? templatesHeader.headerWhite : templatesHeader.headerBlackLogged;
     //render the color based on the user logged in or not
     if (!isLoggedIn) {
       headerMenu.innerHTML = '';

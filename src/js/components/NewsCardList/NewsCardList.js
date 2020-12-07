@@ -5,7 +5,7 @@ export default class NewsCardList {
   constructor(cardListContainer, cardsArray, pageSize, eventHandlers) {
     this.cardListContainer = cardListContainer;
     this.pageSize = pageSize;
-    this.eventHandlers =  eventHandlers;
+    this.eventHandlers = eventHandlers;
     this.cardsArray = cardsArray;
     this.cardIndexToRender = 0;
   }
@@ -15,10 +15,12 @@ export default class NewsCardList {
     this.cardListContainer.insertAdjacentHTML('afterbegin', templatesCardList.loader);
   }
 
-  renderResults(cardsArray,isLoggedIn, input) {
+  renderResults(cardsArray, isLoggedIn, keyword) {
     this._resetContainer();
     this.cardsArray = cardsArray;
     this.cardIndexToRender = 0;
+    this.isLoggedIn = isLoggedIn;
+    this.keyword = keyword;
 
     if (cardsArray.length !== 0) {
       this.cardListContainer.insertAdjacentHTML('afterbegin', templatesCardList.results);
@@ -28,14 +30,13 @@ export default class NewsCardList {
       });
       this.resultContainer = this.cardListContainer.querySelector('.found-card__container');
 
-      this._renderPage(isLoggedIn, input);
+      this._renderPage();
     } else {
       this.cardListContainer.insertAdjacentHTML('afterbegin', templatesCardList.noResults);
     }
   }
 
-  renderSavedResults(cardsArray,isLoggedIn, input) {
-    console.log(cardsArray)
+  renderSavedResults(cardsArray, isLoggedIn, input) {
     if (cardsArray.length !== 0) {
       this.cardsArray = cardsArray;
       this.cardListContainer.insertAdjacentHTML('afterbegin', templatesCardList.savedResults);
@@ -60,13 +61,13 @@ export default class NewsCardList {
     this._renderPage();
   }
 
-  _renderPage(isLoggedIn,input) {
+  _renderPage() {
     const nextPageIndex = this.cardIndexToRender + this.pageSize;
 
     while (this.cardIndexToRender < nextPageIndex && this.cardIndexToRender < this.cardsArray.length) {
-      const cardHtml = new NewsCard(this.resultContainer, this.cardsArray[this.cardIndexToRender], this.eventHandlers, input);
-      cardHtml.renderCard(isLoggedIn);
-      cardHtml.renderIcon(isLoggedIn);
+      const cardHtml = new NewsCard(this.resultContainer, this.cardsArray[this.cardIndexToRender], this.eventHandlers, this.keyword);
+      cardHtml.renderCard(this.isLoggedIn);
+      cardHtml.renderIcon(this.isLoggedIn);
       cardHtml.renderDeleteIcon();
       this.cardIndexToRender++;
     }

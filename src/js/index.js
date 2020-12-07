@@ -69,10 +69,10 @@ headerObj.render(userLoggedIn);
 
 //event handler for saving the article
 const cardEventHandlers = {
-  saveButton: (keyword, title, description, publishedAt, source, url, urlToImage) => {
+  saveButton: (keyword, title, description, publishedAt, source, url, urlToImage) =>
+    //deleteButton: (id) => MAIN_API.removeArticle(id)
     MAIN_API.createArticle(keyword, title, description, publishedAt, source, url, urlToImage)
-      .then(data => console.log(data))
-  }
+  
 }
 
 //render user's data  in the header
