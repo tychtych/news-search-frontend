@@ -4,4 +4,11 @@
   display: flex;
   padding: 15px 12px;
   align-items: center;
+  margin-left: 16px;
 }
+
+.button__user_white {
+  border: 1px solid #FFFF;
+}
+
+

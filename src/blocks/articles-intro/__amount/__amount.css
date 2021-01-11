@@ -1,0 +1,20 @@
+.articles-intro__amount {
+  font-family: 'Roboto Slab', Arial, sans-serif;
+  font-size: 40px;
+  line-height: 46px;
+  font-style: normal;
+  font-weight: 400;
+  color: #1A1B22;
+}
+
+/*
+.articles-intro__amount::after {
+  content: ' сохраненных статей';
+}*/
+
+@media screen and (max-width: 500px){
+  .articles-intro__amount {
+    font-size: 30px;
+    line-height: 34px;
+  }
+}

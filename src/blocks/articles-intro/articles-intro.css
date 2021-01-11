@@ -2,7 +2,15 @@
 @import url('__title/__title.css');
 @import url('__keywords/__keywords.css');
 @import url('__keywords-bold/__keywords-bold.css');
+@import url('__amount/__amount.css');
+@import url('__wrap/__wrap.css');
 
 .articles-intro {
   padding: 40px 104px 56px;
+}
+
+@media screen and (max-width: 768px) {
+  .articles-intro {
+    padding: 24px 40px 32px;
+  }
 }

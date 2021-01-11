@@ -3,6 +3,17 @@
   font-size: 40px;
   line-height: 46px;
   font-style: normal;
+  font-weight: 400;
   color: #1A1B22;
-  max-width: 396px;
+  max-width: 418px;
 }
+
+@media screen and (max-width: 768px) {
+  .articles-intro__title {
+    font-size: 30px;
+    line-height: 34px;
+    max-width: 321px;
+    margin-bottom: 5px;
+  }
+}
+

@@ -3,4 +3,11 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  padding-bottom: 80px;
+}
+
+@media screen and (max-width: 396px){
+  .wrapper {
+    padding-bottom: 126px;
+  }
 }

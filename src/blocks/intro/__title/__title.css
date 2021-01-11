@@ -2,9 +2,29 @@
   font-family: "Roboto Slab", Arial, sans-serif;
   font-size: 60px;
   line-height: 64px;
+  font-style: normal;
+  font-weight: 400;
   color: #FFFFFF;
   max-width: 670px;
+  min-width: 285px;
   margin: 80px 0 35px 0;
 }
+
+@media screen and (max-width: 768px) {
+  .intro__title {
+    max-width: 399px;
+    font-size: 36px;
+    line-height: 40px;
+    margin: 38px 0 16px 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .intro__title {
+   margin: 30px 0 16px 0;
+
+  }
+}
+
 
 

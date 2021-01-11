@@ -9,3 +9,16 @@
   margin: 0 auto;
   padding: 80px 0 80px 0;
 }
+
+@media screen and (max-width: 768px) {
+  .about {
+    width: calc(100%- 80px);
+  }
+}
+
+@media screen and (max-width: 659px) {
+  .about {
+    flex-direction: column;
+  }
+}
+

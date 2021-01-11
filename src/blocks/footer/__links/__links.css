@@ -3,3 +3,17 @@
   list-style: none;
   text-decoration: none;
 }
+
+@media screen and (max-width: 768px){
+  .footer__links {
+    padding-left: 24px;
+  }
+}
+
+
+@media screen and (max-width: 425px){
+  .footer__links {
+    padding-left: 0px;
+
+  }
+}

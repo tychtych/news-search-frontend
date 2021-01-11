@@ -1,10 +1,19 @@
 .footer__item {
+  font-family: 'Roboto', Arial, sans-serif;
+  font-weight: 400;
   font-size: 18px;
   line-height: 24px;
   color: #1A1B22;
   margin-right: 41px;
+  list-style: none;
 }
 
 .footer__item:first-child {
   margin-right: 10px;
+}
+
+@media screen and (max-width: 425px) {
+  .footer__item {
+    margin-bottom: 20px;
+  }
 }

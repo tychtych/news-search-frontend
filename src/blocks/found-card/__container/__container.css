@@ -4,6 +4,30 @@
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 16px;
   justify-content: center;
+  margin-bottom: 56px;
 }
 
+@media screen and (max-width: 1240px) and (min-width: 730px){
+  .found-card__container {
+    width: calc(100% - 80px);
+  }
+}
 
+@media screen and (max-width: 768px){
+  .found-card__container {
+    grid-gap: 8px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .found-card__container {
+    margin-bottom: 22px;
+  }
+}
+
+@media screen and (max-width: 730px) {
+  .found-card__container {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10px;
+  }
+}

@@ -1,7 +1,12 @@
-.error-message {
+.popup__error-message {
   font-size: 12px;
   line-height: 15px;
   color: #FF0000;
   padding: 0px;
 
+}
+
+.popup__error-message_center {
+  display: flex;
+  justify-content: center;
 }

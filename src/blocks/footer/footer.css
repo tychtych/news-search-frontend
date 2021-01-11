@@ -2,9 +2,32 @@
 @import url('__links/__links.css');
 @import url('__link/__link.css');
 @import url('__item/__item.css');
+@import url('__icon-link/__icon-link.css');
+@import url('__wrap/__wrap.css');
 .footer {
   padding: 32px 104px 26px 104px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+
+@media screen and (max-width: 768px) {
+  .footer {
+    padding: 24px 12px 18px;
+
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .footer {
+    flex-direction: column-reverse;
+    /* padding: 20px 16px; */
+    /* width: 100%; */
+    /* max-width: 320px; */
+    margin: 0 auto;
+    /* width: 100%; */
+    width: calc(100% - 32px);
+    padding: 4px 0 0 0;
+  }
 }

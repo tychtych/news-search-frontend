@@ -2,6 +2,13 @@
   color: #FFFFFF;
   font-size: 18px;
   line-height: 24px;
-  max-width: 670px;
-  margin: 0px 0px 64px 0px;
+  max-width: 583px;
+  margin: 0px 0px 64px 5px;
+
+}
+
+@media screen and (max-width: 768px) {
+  .intro__subtitle {
+    margin: 0 0 48px 0;
+  }
 }

@@ -2,9 +2,10 @@
   border-radius: 16px 16px 0 0;
   position: relative;
   max-width: 400px;
-  min-width: 288px;
-  height: 272px;
+  width: 100%;
 }
+
+
 
 @media screen and (max-width: 650px) {
   .found-card__image {
